@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>윤의준+윤소연=결혼합니다</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #fdfcfb;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+            .slider .slides {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+
+            .slider img {
+                flex-shrink: 0;
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+            }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0008;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+            .nav-btn.prev {
+                left: 10px;
+            }
+
+            .nav-btn.next {
+                right: 10px;
+            }
+    </style>
+</head>
+<body>
+    <section>
+        <!-- 제목 -->
+        <h1>결혼합니다</h1>
+
+        <!-- 이름 -->
+        <h2>윤의준 ❤️ 윤소연</h2>
+        <img src="1.png" alt="지도 이미지">
+        <!-- 날짜와 시간 -->
+        <p>2025년 9월 20일 토요일 오후 3시</p>
+
+        <!-- 장소 -->
+        <p>하우스오브라비다/라비다하우스</p>
+        <p>단독 하우스웨딩홀 3층</p>
+    </section><section>
+    <!-- 지도 이미지 -->
+    <h2>오시는 길</h2>
+
+    <img src="웨딩홀지도.jpg" alt="지도 이미지">
+
+    <!-- 버튼 이미지 (예: 네이버 지도, 카카오맵) -->
+    <br>
+    <a href="https://naver.me/xQe4riur"><img src="네이버지도.png" alt="네이버지도 바로가기"></a>
+
+    <a href="https://kko.kakao.com/KCZgn0b_FL"><img src="카카오맵.png" alt="카카오맵 바로가기"></a>
+    <h3>셔틀버스</h3>
+    <p>신갈역 어쩌구에서 셔틀버스를 운행합니다</p>
+    <img src="셔틀버스.jpg" alt="셔틀버스 시간표 이미지">
+</section>
+    <!-- 결혼 사진 공간 -->
+    <section>
+        <p>
+            저희 두 사람이 사랑으로 함께하는 새로운 시작을 하려 합니다.<br>
+            따뜻한 마음으로 축복해 주세요.
+        </p>
+
+        <div class="slider" style="position:relative; overflow:hidden; max-width:400px;">
+            <div class="slides" id="slides" style="display:flex; transition:transform 0.5s ease;">
+                <img src="IMG_0002.jpg" alt="결혼사진1" style="width:100%; flex-shrink:0;">
+                <img src="IMG_0004.jpg" alt="결혼사진2" style="width:100%; flex-shrink:0;">
+                <img src="IMG_0067.jpg" alt="결혼사진3" style="width:100%; flex-shrink:0;">
+            </div>
+
+            <!-- 버튼은 슬라이더 밖에 고정 -->
+            <button class="nav-btn prev" onclick="moveSlide(-1)"
+                    style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#0008; color:#fff; border:none; padding:10px; cursor:pointer;">
+                <
+            </button>
+            <button class="nav-btn next" onclick="moveSlide(1)"
+                    style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#0008; color:#fff; border:none; padding:10px; cursor:pointer;">
+                >
+            </button>
+        </div>
+
+        <script>
+            let index = 0;
+            const slides = document.getElementById('slides');
+            const totalSlides = slides.children.length;
+
+            function moveSlide(n) {
+                index += n;
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+        </script>
+    </section>
+
+
+
+    <!-- 계좌 안내 -->
+    <section>
+        <h2>마음 전하실 곳</h2>
+        <h3>신랑측</h3>
+        <p>윤호열 김영미의 아들 윤의준 <br>국민 000000-00-000000 (윤의준)</p>
+        <h3>신부측</h3>
+        <p>윤병화 박은아의 딸 윤소연<br>신한 111111-11-111111 (윤소연)</p>
+    </section>
+
+</body>
+</html>
+
+
