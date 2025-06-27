@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
     <title>윤의준+윤소연=결혼합니다</title>
     <style>
         body {
@@ -25,10 +26,16 @@
             border-radius: 8px;
         }
 
+        /* 🔸 지도/카카오/네이버 버튼 이미지 크기 조절 */
+        .map-button img {
+            width: 100px; /* 원하는 크기로 조정 */
+        }
+
+        /* 🔸 슬라이더 */
         .slider {
             position: relative;
             overflow: hidden;
-            max-width: 400px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -40,7 +47,7 @@
             .slider img {
                 flex-shrink: 0;
                 width: 100%;
-                max-height: 400px;
+                max-height: 800px;
                 object-fit: cover;
             }
 
@@ -64,58 +71,53 @@
             }
     </style>
 </head>
+
 <body>
+
+    <!-- ✅ 인삿말 & 장소 -->
     <section>
-        <!-- 제목 -->
         <h1>결혼합니다</h1>
-
-        <!-- 이름 -->
         <h2>윤의준 ❤️ 윤소연</h2>
-        <img src="1.png" alt="지도 이미지">
-        <!-- 날짜와 시간 -->
+        <img src="1.png" alt="청첩장 대표 이미지">
         <p>2025년 9월 20일 토요일 오후 3시</p>
-
-        <!-- 장소 -->
-        <p>하우스오브라비다/라비다하우스</p>
+        <p>하우스오브라비다 / 라비다하우스</p>
         <p>단독 하우스웨딩홀 3층</p>
-    </section><section>
-    <!-- 지도 이미지 -->
-    <h2>오시는 길</h2>
+    </section>
 
-    <img src="웨딩홀지도.jpg" alt="지도 이미지">
+    <!-- ✅ 오시는 길 -->
+    <section>
+        <h2>오시는 길</h2>
+        <img src="웨딩홀지도.jpg" alt="지도 이미지">
+        <div class="map-button">
+            <a href="https://naver.me/xQe4riur" target="_blank">
+                <img src="네이버지도.png" alt="네이버지도 바로가기">
+            </a>
+            <a href="https://kko.kakao.com/KCZgn0b_FL" target="_blank">
+                <img src="카카오맵.png" alt="카카오맵 바로가기">
+            </a>
+        </div>
 
-    <!-- 버튼 이미지 (예: 네이버 지도, 카카오맵) -->
-    <br>
-    <a href="https://naver.me/xQe4riur"><img src="네이버지도.png" alt="네이버지도 바로가기"></a>
+        <h3>셔틀버스</h3>
+        <p>신갈역 어쩌구에서 셔틀버스를 운행합니다</p>
+        <img src="셔틀버스.jpg" alt="셔틀버스 시간표 이미지">
+    </section>
 
-    <a href="https://kko.kakao.com/KCZgn0b_FL"><img src="카카오맵.png" alt="카카오맵 바로가기"></a>
-    <h3>셔틀버스</h3>
-    <p>신갈역 어쩌구에서 셔틀버스를 운행합니다</p>
-    <img src="셔틀버스.jpg" alt="셔틀버스 시간표 이미지">
-</section>
-    <!-- 결혼 사진 공간 -->
+    <!-- ✅ 결혼 사진 슬라이드 -->
     <section>
         <p>
             저희 두 사람이 사랑으로 함께하는 새로운 시작을 하려 합니다.<br>
             따뜻한 마음으로 축복해 주세요.
         </p>
 
-        <div class="slider" style="position:relative; overflow:hidden; max-width:400px;">
-            <div class="slides" id="slides" style="display:flex; transition:transform 0.5s ease;">
-                <img src="IMG_0002.jpg" alt="결혼사진1" style="width:100%; flex-shrink:0;">
-                <img src="IMG_0004.jpg" alt="결혼사진2" style="width:100%; flex-shrink:0;">
-                <img src="IMG_0067.jpg" alt="결혼사진3" style="width:100%; flex-shrink:0;">
+        <div class="slider">
+            <div class="slides" id="slides">
+                <img src="IMG_0002.jpg" alt="결혼사진1">
+                <img src="IMG_0004.jpg" alt="결혼사진2">
+                <img src="IMG_0067.jpg" alt="결혼사진3">
             </div>
 
-            <!-- 버튼은 슬라이더 밖에 고정 -->
-            <button class="nav-btn prev" onclick="moveSlide(-1)"
-                    style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#0008; color:#fff; border:none; padding:10px; cursor:pointer;">
-                <
-            </button>
-            <button class="nav-btn next" onclick="moveSlide(1)"
-                    style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#0008; color:#fff; border:none; padding:10px; cursor:pointer;">
-                >
-            </button>
+            <button class="nav-btn prev" onclick="moveSlide(-1)">&#60;</button>
+            <button class="nav-btn next" onclick="moveSlide(1)">&#62;</button>
         </div>
 
         <script>
@@ -132,18 +134,62 @@
         </script>
     </section>
 
-
-
-    <!-- 계좌 안내 -->
+    <!-- ✅ 계좌 안내 -->
     <section>
         <h2>마음 전하실 곳</h2>
         <h3>신랑측</h3>
-        <p>윤호열 김영미의 아들 윤의준 <br>국민 000000-00-000000 (윤의준)</p>
+        <p>윤호열 김영미의 셋째 아들 윤의준</p>
+        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">
+            국민 000000-00-000000 (윤의준)
+        </p>
         <h3>신부측</h3>
-        <p>윤병화 박은아의 딸 윤소연<br>신한 111111-11-111111 (윤소연)</p>
+        <p>윤병화 박은아의 딸 윤소연</p>
+        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">
+            신한 111111-11-111111 (윤소연)
+        </p>
+
+
+        <!-- ✅ 토스트 메시지 -->
+        <div id="toast" style="
+  visibility: hidden;
+  min-width: 160px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: 14px;
+  transition: visibility 0s, opacity 0.5s ease;
+  opacity: 0;
+">
+            복사되었습니다 ✅
+        </div>
+        <!-- 🧠 자바스크립트 -->
+        <script>
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const toast = document.getElementById("toast");
+                    toast.style.visibility = "visible";
+                    toast.style.opacity = "1";
+
+                    setTimeout(() => {
+                        toast.style.opacity = "0";
+                        toast.style.visibility = "hidden";
+                    }, 1500); // 1.5초 후 사라짐
+                }).catch(err => {
+                    alert("복사 실패 😢");
+                    console.error(err);
+                });
+            }
+        </script>
+
     </section>
 
 </body>
 </html>
-
 
