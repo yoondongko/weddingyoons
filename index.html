@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <title>윤의준+윤소연=결혼합니다</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>윤의준♥윤소연 결혼합니다</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /*능소화체*/
         @font-face {
             font-family: 'GrandifloraOne-Regular';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/GrandifloraOne-Regular.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
         }
-        /*조선일보명조체*/
-        @font-face {
-            font-family: 'Chosunilbo_myungjo';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        /*스위트*/
+
         @font-face {
             font-family: 'SUITE-Regular';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
         }
 
-
-
+        @font-face {
+            font-family: 'HSSaemaul-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
+        }
 
         body {
-            font-family: 'SUITE-Regular', sans-serif;
-            font-size: 17px; /* ✔ 글씨 기본 크기 키움 */
-            line-height: 1.7; /* ✔ 줄 간격 넉넉하게 */
+            line-height: 1.7;
             text-align: center;
             margin: 0;
             padding: 10px;
             background-color: #F7F4EF;
+            font-family: 'SUITE-Regular', sans-serif;
         }
 
         section {
@@ -55,6 +45,29 @@
 
         .specialFont {
             font-family: 'GrandifloraOne-Regular', sans-serif;
+            font-size: 40px;
+            color: #60B015;
+        }
+
+        h1 {
+            font-family: 'HSSaemaul-Regular', sans-serif;
+            font-size: 35px;
+        }
+
+        h2 {
+            font-family: 'HSSaemaul-Regular', sans-serif;
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            color: #2B3D27;
         }
 
         img {
@@ -65,24 +78,23 @@
             border-radius: 8px;
         }
 
-        /* 🔸 지도/카카오/네이버 버튼 이미지 크기 조절 */
         .map-button img {
-            width: 100px; /* 원하는 크기로 조정 */
+            width: 50px;
         }
 
-        /* 🔸 슬라이더 */
         .slider {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             position: relative;
+            overflow: hidden;
+            background-color: #f5f5f5;
         }
 
         .slide-wrapper {
-            position: relative;
             width: 100%;
-            padding-top: 100%; /* 4:3 비율 (필요 시 56.25% = 16:9) */
-            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            position: relative;
         }
 
         .slides {
@@ -90,192 +102,178 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
             height: 100%;
+            width: 100%;
             transition: transform 0.5s ease;
         }
 
             .slides img {
-                flex-shrink: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: contain; /* 또는 contain */
+                flex: 0 0 100%;
+                object-fit: contain;
+                margin: auto;
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                background-color: #f5f5f5;
             }
+
+        .slider-controls {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
 
         .nav-btn {
-            position:  absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #0008;
-            color: white;
+            background: none;
             border: none;
-            padding: 10px;
+            font-size: 28px;
+            color: #444;
             cursor: pointer;
-            z-index: 1;
         }
 
-        /* 모바일에서는 버튼 숨김 */
-        @media (max-width: 768px) {
-            .nav-btn {
-                display: none;
+        .dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            font-size: 16px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+            .dot.active {
+                color: #60b015;
             }
-        }
-
-        .nav-btn.prev {
-            left: 10px;
-        }
-
-        .nav-btn.next {
-            right: 10px;
-        }
     </style>
 </head>
-
 <body>
-
-    <!-- ✅ 인삿말 & 장소 -->
     <section>
-        <h1 class="specialFont">결혼합니다</h1>
-        <h2>윤의준 ♥ 윤소연</h2>
-        <img src="1.png" alt="청첩장 대표 이미지">
+        <h1 class="specialFont">결혼합니다<br>윤의준 ♥ 윤소연</h1>
+        <img src="1.png" alt="청첩장 대표 이미지" />
         <p>2025년 9월 20일 토요일 오후 3시</p>
         <p>하우스오브라비다 / 라비다하우스</p>
         <p>단독 하우스웨딩홀 3층</p>
     </section>
 
-    <!-- ✅ 오시는 길 -->
     <section>
         <h1>오시는 길</h1>
-        <img src="웨딩홀지도.jpg" alt="지도 이미지">
+        <img src="웨딩홀지도.jpg" alt="지도 이미지" />
         <div class="map-button">
             <a href="https://naver.me/xQe4riur" target="_blank">
-                <img src="네이버지도.png" alt="네이버지도 바로가기">
+                <img src="네이버지도.png" alt="네이버지도 바로가기" />
             </a>
             <a href="https://kko.kakao.com/KCZgn0b_FL" target="_blank">
-                <img src="카카오맵.png" alt="카카오맵 바로가기">
+                <img src="카카오맵.png" alt="카카오맵 바로가기" />
             </a>
         </div>
-
         <h2>셔틀버스</h2>
         <p>신갈역 어쩌구에서 셔틀버스를 운행합니다</p>
-        <img src="셔틀버스.jpg" alt="셔틀버스 시간표 이미지">
+        <img src="셔틀버스.jpg" alt="셔틀버스 시간표 이미지" />
     </section>
 
-    <!-- ✅ 결혼 사진 슬라이드 -->
     <section>
-        <p>
-            저희 두 사람이 사랑으로 함께하는 새로운 시작을 하려 합니다.<br>
-            따뜻한 마음으로 축복해 주세요.
-        </p>
-
+        <p>저희 두 사람이 사랑으로 함께하는 새로운 시작을 하려 합니다.<br>따뜻한 마음으로 축복해 주세요.</p>
         <div class="slider">
             <div class="slide-wrapper">
                 <div class="slides" id="slides">
-                    <img src="IMG_0002.jpg" alt="결혼사진1">
-                    <img src="IMG_0004.jpg" alt="결혼사진2">
-                    <img src="IMG_0067.jpg" alt="결혼사진3">
-                    <img src="1.png" alt="결혼진">
+                    <img src="IMG_0002.jpg" alt="사진1" />
+                    <img src="IMG_0004.jpg" alt="사진2" />
+                    <img src="IMG_0067.jpg" alt="사진3" />
                 </div>
             </div>
-
-            <button class="nav-btn prev" onclick="moveSlide(-1)">&#60;</button>
-            <button class="nav-btn next" onclick="moveSlide(1)">&#62;</button>
+            <div class="slider-controls">
+                <button class="nav-btn prev" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
+                <div id="dots" class="dots"></div>
+                <button class="nav-btn next" onclick="moveSlide(1)"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
         </div>
-
-        <script>
-            let index = 0;
-            const slides = document.getElementById('slides');
-            const totalSlides = slides.children.length;
-
-            function moveSlide(n) {
-                index += n;
-                if (index < 0) index = totalSlides - 1;
-                if (index >= totalSlides) index = 0;
-                slides.style.transform = `translateX(-${index * 100}%)`;
-            }
-
-            // 👉 터치 슬라이드 기능
-            let startX = 0;
-            let endX = 0;
-
-            slides.addEventListener('touchstart', e => {
-                startX = e.touches[0].clientX;
-            });
-
-            slides.addEventListener('touchmove', e => {
-                endX = e.touches[0].clientX;
-            });
-
-            slides.addEventListener('touchend', () => {
-                let diffX = startX - endX;
-                if (Math.abs(diffX) > 50) {
-                    if (diffX > 0) {
-                        moveSlide(1); // 오른쪽으로 스와이프 → 다음
-                    } else {
-                        moveSlide(-1); // 왼쪽으로 스와이프 → 이전
-                    }
-                }
-            });
-        </script>
     </section>
 
-    <!-- ✅ 계좌 안내 -->
     <section>
         <h1>마음 전하실 곳</h1>
         <h2>신랑측</h2>
         <h3>윤호열 김영미의 셋째 아들 윤의준</h3>
-        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">
-            국민 000000-00-000000 (윤의준)
-        </p>
+        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">국민 000000-00-000000 (윤의준)</p>
         <h2>신부측</h2>
         <h3>윤병화 박은아의 딸 윤소연</h3>
-        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">
-            신한 111111-11-111111 (윤소연)
-        </p>
-
-
-        <!-- ✅ 토스트 메시지 -->
-        <div id="toast" style="
-  visibility: hidden;
-  min-width: 160px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 12px;
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  font-size: 14px;
-  transition: visibility 0s, opacity 0.5s ease;
-  opacity: 0;
-">
-
-        </div>
-        <!-- 🧠 자바스크립트 -->
-        <script>
-            function copyToClipboard(text) {
-                navigator.clipboard.writeText(text).then(() => {
-                    const toast = document.getElementById("toast");
-                    toast.innerHTML = `복사되었습니다.<br><strong>${text}</strong>`;
-                    toast.style.visibility = "visible";
-                    toast.style.opacity = "1";
-
-                    setTimeout(() => {
-                        toast.style.opacity = "0";
-                        toast.style.visibility = "hidden";
-                    }, 1500); // 1.5초 후 사라짐
-                }).catch(err => {
-                    alert("복사 실패 😢");
-                    console.error(err);
-                });
-            }
-        </script>
-
+        <p onclick="copyToClipboard(this.innerText)" style="cursor:pointer;">신한 111111-11-111111 (윤소연)</p>
+        <div id="toast" style="visibility: hidden; min-width: 160px; background-color: #333; color: #fff; text-align: center; border-radius: 5px; padding: 12px; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 100; font-size: 14px; transition: visibility 0s, opacity 0.5s ease; opacity: 0;"></div>
     </section>
 
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById("toast");
+                toast.innerHTML = `복사되었습니다.<br><strong>${text}</strong>`;
+                toast.style.visibility = "visible";
+                toast.style.opacity = "1";
+                setTimeout(() => {
+                    toast.style.opacity = "0";
+                    toast.style.visibility = "hidden";
+                }, 1500);
+            }).catch(err => {
+                alert("복사 실패 😢");
+                console.error(err);
+            });
+        }
+
+        window.addEventListener("load", () => {
+            const slides = document.getElementById("slides");
+            const totalSlides = slides.children.length;
+            const dotsContainer = document.getElementById("dots");
+            let index = 0;
+            let isTransitioning = false;
+
+            slides.style.width = `${totalSlides * 100}%`;
+            for (let i = 0; i < totalSlides; i++) {
+                const img = slides.children[i];
+                img.style.flex = "0 0 100%";
+                const ratio = img.naturalWidth / img.naturalHeight;
+                if (ratio > 1) {
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                } else {
+                    img.style.height = '100%';
+                    img.style.width = 'auto';
+                }
+            }
+
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.innerHTML = "●";
+                dot.addEventListener("click", () => moveToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            function moveToSlide(n) {
+                if (isTransitioning || n === index) return;
+                index = n;
+                updateSlide();
+            }
+
+            function moveSlide(n) {
+                if (isTransitioning) return;
+                index += n;
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                updateSlide();
+            }
+
+            function updateSlide() {
+                isTransitioning = true;
+                slides.style.transform = `translateX(-${index * 100}%)`;
+                document.querySelectorAll(".dot").forEach((dot, i) =>
+                    dot.classList.toggle("active", i === index)
+                );
+                setTimeout(() => isTransitioning = false, 500);
+            }
+
+            updateSlide();
+        });
+    </script>
 </body>
 </html>
-
