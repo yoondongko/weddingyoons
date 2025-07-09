@@ -56,6 +56,7 @@
   --bg-beige: rgba(245,244,243,1);
   --bg-card: rgba(229,223,211,1);
   --bg-yellow: rgba(214,216,115,1);
+  --bg-ivory: rgba(248,245,238,1);
   --bg-pink: rgba(252,150,136,1);
 }
 
@@ -83,6 +84,11 @@ body {
   line-height: 1;
   letter-spacing: 0.2em
 }
+
+.inline h1, .inline h2
+{display: inline-block;
+margin: 3px;
+text-align: justify;}
 
 img {
   max-width: 100%;
@@ -135,7 +141,7 @@ font-size: 18px;
 {
   font-family: var(--font-dxb);
   color: var(--color-green);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .weddingDay
@@ -183,6 +189,10 @@ margin: 0 !important;
 ============================ */
 
 .button-yellow {
+  display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
     border: none;
    cursor: pointer;
    text-align: center;
@@ -195,19 +205,28 @@ margin: 0 !important;
           color: var(--color-dark);
 }
 .button-yellowMap {
+  display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
     border: none;
    cursor: pointer;
    text-align: center;
-   width: 200;
+   width: 215;
    height: 40px;
    border-radius: 30px;
    background: var(--bg-yellow);
      font-family: var(--font-suite);
      font-size: 12px;
           color: var(--color-dark);
+          margin: 5px;
 }
 
 .button-yellowBankG {
+   display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
     border: none;
    cursor: pointer;
    text-align: center;
@@ -221,6 +240,10 @@ margin: 0 !important;
 }
 
 .button-yellowBankB {
+   display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
     border: none;
    cursor: pointer;
    text-align: center;
@@ -231,6 +254,7 @@ margin: 0 !important;
      font-family: var(--font-suite);
      font-size: 12px;
           color: var(--color-red);
+          
 }
 
 .button-pink {
@@ -253,30 +277,20 @@ margin: 0 !important;
   cursor: pointer;
 }
 
-.gallery-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.gallery-button img {
-  width: 74px;
-  height: 74px;
-}
 
 
 /* ============================
    Sections
 ============================ */
 section {
-  padding: 40px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
-.section-beige {
-  background: var(--bg-card);
+.section-popup {
+  background: var(--bg-ivory);
 }
-.section-pink {
-  background: var(--bg-pink);
+.section-card {
+  background: var(--bg-card);
 }
 
 /* ============================
@@ -337,6 +351,18 @@ section {
   border-radius: 5px;
 }
 
+.gallery-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-button img {
+  width: 73px;
+  height: 73px;
+}
+
+
 /* ============================
    Map / Location
 ============================ */
@@ -361,7 +387,7 @@ section {
 footer
 ============================ */
 footer p {
-  font-size: 12px;
+  font-size: 10px;
   color: #999;
   text-align: center;
   line-height: 1.6;
