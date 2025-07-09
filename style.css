@@ -113,6 +113,35 @@ h1 {
   font-size: 12px;
 }
 
+.popupFont
+{
+  font-family: var(--font-gowun);
+  color: var(--color-dark);
+  font-weight: 400;
+  font-size: 8px;
+}
+.popupFontBold
+{
+  font-family: var(--font-gowun);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.popupFontG{
+font-family: var(--font-gowun);
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.popupFontB{
+font-family: var(--font-gowun);
+  color: var(--color-red);
+  font-weight: 700;
+  font-size: 10px;
+}
+
 h3, h4 {
   font-family: var(--font-gowun);
   color: var(--color-muted);
@@ -315,7 +344,11 @@ section {
   text-align: center;
 }
 .section-popup {
-  background: var(--bg-ivory);
+  width: 90%;
+  padding: 10px 10px;
+  background: var(--bg-card);
+    border: none;
+    border-radius: 10px;
 }
 .section-card {
   background: var(--bg-card);
