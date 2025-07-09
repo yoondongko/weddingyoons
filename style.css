@@ -1,3 +1,7 @@
+
+
+
+
 /* ============================
    Fonts
 ============================ */
@@ -75,7 +79,9 @@ body {
   background: var(--bg-beige);
   color: var(--color-dark);
   font-family: var(--font-gowun);
-  line-height: 1.4;
+  line-height: 1.6;
+  
+ 
 }
 
 .location h1 ,.location h2
@@ -98,13 +104,13 @@ h1 {
   font-family: var(--font-gowun);
   color: var(--color-muted);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
   h2{
   font-family: var(--font-gowun);
   color: var(--color-muted);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 h3, h4 {
@@ -129,11 +135,11 @@ font-weight: 700;
 {
   font-family:'KCC-Ahnchangho';
   color: var(--color-green);
-font-size: 18px;
+font-size: 16px;
 }
 .weAreGMText
 {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-dark);
   font-weight: 700;
 }
@@ -160,14 +166,6 @@ margin: 0 !important;
   font-size: 24px;
 }
 
-
-.btnText
-{
-  font-family: var(--font-suite);
-  font-weight: 600;
-  font-size: 12px;
-}
-
 /* ============================
    Utility classes
 ============================ */
@@ -189,9 +187,7 @@ margin: 0 !important;
 ============================ */
 
 .button-yellow {
-  display: inline-flex;
- justify-content: center;
- align-items: center;
+
  gap: 10px;
     border: none;
    cursor: pointer;
@@ -205,9 +201,7 @@ margin: 0 !important;
           color: var(--color-dark);
 }
 .button-yellowMap {
-  display: inline-flex;
- justify-content: center;
- align-items: center;
+
  gap: 10px;
     border: none;
    cursor: pointer;
@@ -223,9 +217,7 @@ margin: 0 !important;
 }
 
 .button-yellowBankG {
-   display: inline-flex;
- justify-content: center;
- align-items: center;
+
  gap: 10px;
     border: none;
    cursor: pointer;
@@ -240,9 +232,7 @@ margin: 0 !important;
 }
 
 .button-yellowBankB {
-   display: inline-flex;
- justify-content: center;
- align-items: center;
+
  gap: 10px;
     border: none;
    cursor: pointer;
@@ -258,7 +248,7 @@ margin: 0 !important;
 }
 
 .button-pink {
-    border: none;
+      border: none;
    cursor: pointer;
    text-align: center;
    width: 215px;
@@ -345,7 +335,7 @@ section {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2px;
+  gap: 4px;
 }
 .photo-grid img {
   border-radius: 5px;
