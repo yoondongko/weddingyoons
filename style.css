@@ -135,7 +135,7 @@ font-size: 18px;
 {
   font-family: var(--font-dxb);
   color: var(--color-green);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .weddingDay
@@ -151,8 +151,10 @@ margin: 0 !important;
   line-height: 1;
     color: var(--color-green);
    font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
 }
+
+
 .btnText
 {
   font-family: var(--font-suite);
@@ -276,6 +278,52 @@ section {
 .section-pink {
   background: var(--bg-pink);
 }
+
+/* ============================
+   Canlendar
+============================ */
+.canlendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.calendarWeek
+{
+  color: var(--color-muted);
+   font-weight: 700;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+}
+.calendarDay
+{
+  color: var(--color-muted);
+   font-weight: 400;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+.calendarD-Day {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 25px;
+  height: 25px;
+  margin: auto; /* 셀 안에서 가운데 정렬 */
+  border-radius: 50%;
+
+  background: var(--color-green);
+  color: var(--color-white);
+  font-family: var(--font-gowun);
+
+}
+
 
 /* ============================
    Gallery Grid
