@@ -139,7 +139,7 @@ font-size: 16px;
 }
 .weAreGMText
 {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-dark);
   font-weight: 700;
 }
@@ -187,64 +187,102 @@ margin: 0 !important;
 ============================ */
 
 .button-yellow {
+  display: flex;                 /* ➡️ 핵심 */
+  justify-content: center;       /* 가로 가운데 */
+  align-items: center;           /* 세로 가운데 */
+  gap: 10px;                     /* 이미지와 텍스트 사이 */
+  
+margin: 0 auto;
 
- gap: 10px;
-    border: none;
-   cursor: pointer;
-   text-align: center;
-   width: 215px;
-   height: 40px;
-   border-radius: 30px;
-   background: var(--bg-yellow);
-     font-family: var(--font-suite);
-     font-size: 12px;
-          color: var(--color-dark);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--bg-yellow);
+  font-family: var(--font-suite);
+  font-size: 10px;
+  color: var(--color-dark);
 }
 .button-yellowMap {
 
+
  gap: 10px;
-    border: none;
-   cursor: pointer;
-   text-align: center;
-   width: 215;
-   height: 40px;
-   border-radius: 30px;
-   background: var(--bg-yellow);
-     font-family: var(--font-suite);
-     font-size: 12px;
-          color: var(--color-dark);
-          margin: 5px;
+  display: flex;                 /* ➡️ 핵심 */
+  justify-content: center;       /* 가로 가운데 */
+  align-items: center;           /* 세로 가운데 */
+  gap: 10px;                     /* 이미지와 텍스트 사이 */
+  
+  margin: 0 auto;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--bg-card);
+  font-family: var(--font-suite);
+  font-size: 10px;
+  color: var(--color-dark);
+}
+
+.inline-btn
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .button-yellowBankG {
-
  gap: 10px;
-    border: none;
-   cursor: pointer;
-   text-align: center;
-   width: 215px;
-   height: 40px;
-   border-radius: 30px;
-   background: var(--bg-yellow);
-     font-family: var(--font-suite);
-       font-size: 12px;
-          color: var(--color-blue);
+  display: flex;                 /* ➡️ 핵심 */
+  justify-content: center;       /* 가로 가운데 */
+  align-items: center;           /* 세로 가운데 */
+  gap: 10px;                     /* 이미지와 텍스트 사이 */
+  
+  margin: 0 auto;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--bg-yellow);
+  font-family: var(--font-suite);
+  font-size: 10px;
+  color: var(--color-blue);
 }
 
 .button-yellowBankB {
-
  gap: 10px;
-    border: none;
-   cursor: pointer;
-   text-align: center;
-   width: 215px;
-   height: 40px;
-   border-radius: 30px;
-   background: var(--bg-yellow);
-     font-family: var(--font-suite);
-     font-size: 12px;
-          color: var(--color-red);
-          
+  display: flex;                 /* ➡️ 핵심 */
+  justify-content: center;       /* 가로 가운데 */
+  align-items: center;           /* 세로 가운데 */
+  gap: 10px;                     /* 이미지와 텍스트 사이 */
+  
+  margin: 0 auto;
+
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--bg-yellow);
+  font-family: var(--font-suite);
+  font-size: 10px;
+  color: var(--color-red);
+}
+
+.btnGap
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .button-pink {
@@ -256,7 +294,7 @@ margin: 0 !important;
    border-radius: 30px;
    background: var(--bg-pink);
      font-family: var(--font-suite);
-     font-size: 12px;
+     font-size: 10px;
           color: var(--color-dark);
 }
 
@@ -273,7 +311,7 @@ margin: 0 !important;
    Sections
 ============================ */
 section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 .section-popup {
@@ -335,22 +373,19 @@ section {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
+  gap: 2px;
+  width: 95%;
+
 }
-.photo-grid img {
-  border-radius: 5px;
-}
+
 
 .gallery-button {
   background: none;
   border: none;
   cursor: pointer;
+aspect-ratio: 1 / 1;
 }
 
-.gallery-button img {
-  width: 73px;
-  height: 73px;
-}
 
 
 /* ============================
