@@ -2,6 +2,13 @@ function openWeb(url) {
   window.open(url, "_blank");
 }
 
+function showPopupContact() {
+  document.getElementById("popupContact").style.display = "block";
+}
+function hidePopupGroomBank() {
+  document.getElementById("popupContact").style.display = "none";
+}
+
 function showPopupGroomBank() {
   document.getElementById("popupGroomBank").style.display = "block";
 }
