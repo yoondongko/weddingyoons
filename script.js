@@ -40,11 +40,12 @@ const totalImages = 15;
 function popupGallery(n) {
   currentIndex = n;
   showImage(currentIndex);
-  document.getElementById("popGallery").style.display = "block";
+  const modal = document.getElementById("popGallery");
+  modal.classList.add("show");
 }
-
 function closeGallery() {
-  document.getElementById("popGallery").style.display = "none";
+  const modal = document.getElementById("popGallery");
+  modal.classList.remove("show");
 }
 
 function showImage(index) {
@@ -59,4 +60,29 @@ function nextImage() {
 function prevImage() {
   currentIndex = (currentIndex - 2 + totalImages) % totalImages + 1;
   showImage(currentIndex);
+}
+
+let startX = 0;
+let endX = 0;
+
+const modal = document.getElementById("popGallery");
+
+modal.addEventListener('touchstart', function(e) {
+  startX = e.touches[0].clientX;
+}, false);
+
+modal.addEventListener('touchend', function(e) {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+}, false);
+
+function handleSwipe() {
+  let diffX = startX - endX;
+  if (Math.abs(diffX) > 30) { 
+    if (diffX > 0) {
+      nextImage();
+    } else {
+      prevImage();
+    }
+  }
 }

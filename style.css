@@ -427,20 +427,18 @@ section {
   grid-template-columns: repeat(5, 1fr);
   gap: 2px;
   width: 95%;
-
 }
-
-
 .gallery-button {
   background: none;
   border: none;
   cursor: pointer;
-aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
 }
 
 
 .modalGallery {
   display: none;
+  pointer-events: none;
   position: fixed;
   z-index: 1000;
   left: 0; top: 0;
@@ -448,28 +446,41 @@ aspect-ratio: 1 / 1;
   background: rgba(0,0,0,0.8);
   text-align: center;
 }
+.modalGallery.show {
+  display: flex;
+  pointer-events: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 .modalGallery img {
   max-width: 90%;
   max-height: 80%;
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 }
-.modalGallery .close, .prev, .next {
+.modalGallery .close, 
+.modalGallery .prev, 
+.modalGallery .next {
   position: absolute;
-  top: 50%;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   user-select: none;
+  z-index: 1010;
+  pointer-events: auto;
 }
 .modalGallery .close {
   right: 30px;
   top: 20px;
-  font-size: 40px;
 }
-.modalGallery .prev { left: 20px; transform: translateY(-100%); }
-.modalGallery .next { right: 20px; transform: translateY(-100%); }
+.modalGallery .prev { left: 20px; top: 50%; transform:  translateY(-50%); }
+.modalGallery .next { right: 20px; top: 50%;  transform:  translateY(-50%); }
 
 
 /* ============================
