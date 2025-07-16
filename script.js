@@ -8,3 +8,10 @@ function showPopupGroomBank() {
 function hidePopupGroomBank() {
   document.getElementById("popupGroomBank").style.display = "none";
 }
+
+function showPopupBrideBank() {
+  document.getElementById("popupBrideBank").style.display = "block";
+}
+function hidePopupBrideBank() {
+  document.getElementById("popupBrideBank").style.display = "none";
+}

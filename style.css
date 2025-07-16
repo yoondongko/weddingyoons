@@ -346,8 +346,8 @@ section {
 }
 .section-popup {
   display: none;
-  width: 90%;
-  padding: 10px 10px;
+  width: 98%;
+  padding: 5px 5px;
   background: var(--bg-card);
     border: none;
     border-radius: 10px;
@@ -357,7 +357,7 @@ section {
 }
 
 .close {
-  float: right;
+  float: top;
   font-size: 24px;
   cursor: pointer;
 }
