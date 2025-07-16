@@ -118,7 +118,7 @@ h1 {
   font-family: var(--font-gowun);
   color: var(--color-dark);
   font-weight: 400;
-  font-size: 8px;
+  font-size: 10px;
   
 }
 .popupFontBold
@@ -263,7 +263,24 @@ margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 10px;
+}
 
+.inline-bank
+{
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+margin-right: 10%;
+margin-bottom: 20px;
+}
+
+.inline-contact
+{
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+margin-right: 15%;
+margin-bottom: 20px;
 }
 
 .button-yellowBankG {
