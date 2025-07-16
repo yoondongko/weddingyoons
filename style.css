@@ -265,13 +265,6 @@ margin: 0 auto;
   gap: 10px;
 }
 
-.inline-bank
-{
-  display: flex;
-  justify-content: right;
-  gap: 10px;
-margin-bottom: 20px;
-}
 
 .inline-contact
 {
