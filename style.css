@@ -119,6 +119,7 @@ h1 {
   color: var(--color-dark);
   font-weight: 400;
   font-size: 8px;
+  
 }
 .popupFontBold
 {
@@ -328,7 +329,7 @@ margin: 0 auto;
 }
 
 
-.icon-button {
+.icon-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -344,6 +345,7 @@ section {
   text-align: center;
 }
 .section-popup {
+  display: none;
   width: 90%;
   padding: 10px 10px;
   background: var(--bg-card);
@@ -352,6 +354,12 @@ section {
 }
 .section-card {
   background: var(--bg-card);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* ============================
