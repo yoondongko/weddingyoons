@@ -263,6 +263,7 @@ margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 10px;
+
 }
 
 .button-yellowBankG {
@@ -360,7 +361,8 @@ section {
   background: var(--bg-card);
     border: none;
     border-radius: 10px;
-}
+  }
+
 .section-card {
   background: var(--bg-card);
 }
