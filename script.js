@@ -5,7 +5,7 @@ function openWeb(url) {
 function showPopupContact() {
   document.getElementById("popupContact").style.display = "block";
 }
-function hidePopupGroomBank() {
+function hidePopupContact() {
   document.getElementById("popupContact").style.display = "none";
 }
 
